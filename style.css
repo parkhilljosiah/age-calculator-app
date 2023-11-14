@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --purple: #854dff;
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-grey);
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  width: 80%;
+  height: 30em;
+  padding: 3em 1em;
+  border-radius: 2em 2em 8em 2em;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.input__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input__container > label {
+  color: var(--smokey-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.85em;
+}
+
+.input__container > input {
+  width: 2.75em;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 700;
+  border-radius: 0.25em;
+  border: 2px solid var(--light-grey);
+}
+
+.input__container > input:focus {
+  outline: none !important;
+  border: 2px solid var(--purple) !important;
+}
+
+#field__required__one,
+#field__required__two,
+#field__required__three,
+#invalid__day,
+#invalid__month,
+#invalid__year {
+  bottom: -4em;
+  position: absolute;
+  display: none;
+  color: var(--light-red);
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.field__required__input > label {
+  color: var(--light-red);
+}
+
+.field__required__input > input {
+  border-color: var(--light-red);
+  color: var(--light-red);
+}
+
+.center {
+  position: relative;
+  margin-block: 5em;
+  width: 95%;
+  margin-inline: auto;
+  border-top: 2px solid var(--light-grey);
+}
+
+.button {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  padding: 1.5em;
+  background-color: var(--purple);
+  border: none;
+  top: -2.5em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--off-black);
+}
+
+.img {
+  height: 2em;
+}
+
+.bottom {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 3.5em;
+  line-height: 1.15em;
+  display: flex;
+  gap: 0.25em;
+}
+
+.bottom > p {
+  margin: 0;
+}
+
+#calcYears,
+#calcMonths,
+#calcDays {
+  color: var(--purple);
+}
+
+.attribution {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 1em;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+.attribution > a {
+  color: var(--purple);
+}
+
+.attribution > a {
+  color: #7845e6;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 50%;
+  }
+
+  .form {
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2em;
+    gap: 2em;
+  }
+
+  .input__container > label {
+    font-size: 1em;
+  }
+
+  .input__container > input {
+    width: 4em;
+    padding: 0.75em;
+  }
+
+  .center {
+    margin-block: 4em;
+    width: 90%;
+  }
+
+  .button {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    padding: 2em;
+    top: -3.15em;
+    left: 90%;
+    transform: translate(0);
+  }
+
+  .bottom {
+    margin-left: 0.5em;
+    font-size: 5em;
+    line-height: 1.15em;
+    display: flex;
+    gap: 0.25em;
+  }
+}

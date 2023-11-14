@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <div id="day__container" class="input__container">
+          <label for="day" id="label">Day</label>
+          <input type="text" id="day" placeholder="DD" />
+          <p id="field__required__one">This field is required</p>
+          <p id="invalid__day">Must be a valid day</p>
+        </div>
+        <div id="month__container" class="input__container">
+          <label for="month">Month</label>
+          <input type="text" id="month" placeholder="MM" />
+          <p id="field__required__two">This field is required</p>
+          <p id="invalid__month">Must be a valid month</p>
+        </div>
+        <div id="year__container" class="input__container">
+          <label for="year">Year</label>
+          <input type="text" id="year" placeholder="YYYY" />
+          <p id="field__required__three">This field is required</p>
+          <p id="invalid__year">Must be in the past</p>
+        </div>
+      </form>
+      <div class="center">
+        <button onclick="handleClick(event)" type="submit" class="button">
+          <img src="./assets/images/icon-arrow.svg" class="img" />
+        </button>
+      </div>
+      <div class="bottom">
+        <p id="calcYears">--</p>
+        <p>years</p>
+      </div>
+      <div class="bottom">
+        <p id="calcMonths">--</p>
+        <p>months</p>
+      </div>
+      <div class="bottom">
+        <p id="calcDays">--</p>
+        <p>days</p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.josiahparkhill.dev/">Josiah Parkhill</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
